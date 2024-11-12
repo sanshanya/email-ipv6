@@ -1,0 +1,11 @@
+# SMTP服务器配置
+[smtp]
+server = "smtp.qq.com"    # SMTP服务器地址
+port = 587               # SMTP端口
+login = ""              # 邮箱账号
+password = ""           # 邮箱授权码
+from_addr = ""         # 发件人地址
+to_addr = ""          # 收件人地址
+
+# 上次检测到的IPv6地址（程序自动维护，请勿手动修改）
+ipv6 = ""
