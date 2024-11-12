@@ -3,11 +3,19 @@ name = "email-ipv6"
 version = "0.1.0"
 edition = "2021"
 
+# [profile.release]
+# opt-level = "z"       # 优化代码尺寸
+# lto = true            # 启用链接时优化 (Link Time Optimization)
+# codegen-units = 1     # 降低代码生成单元数，增加优化时间但减少二进制大小
+# panic = "abort"       # 使用 'abort' 而不是 'unwind' 来处理 panic
+# strip = "debuginfo"   # 移除调试信息
+
 [profile.release]
 opt-level = 3         # 最大程度优化代码速度
 lto = "fat"           # 启用最大程度的链接时优化
 codegen-units = 1     # 降低代码生成单元数，增加优化时间但提升性能
 panic = "abort"       # 使用 'abort' 而不是 'unwind' 来处理 panic
+
 
 [dependencies]
 lettre = "0.11"
